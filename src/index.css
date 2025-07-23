@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  font-size: 20px !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional background */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@font-face {
+  font-family: "FontAwesomeBrands";
+  src: url("/fonts/fa-brands-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FontAwesomeSolid";
+  src: url("/fonts/fa-solid-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@layer components {
+  .swiper-pagination-bullet {
+    @apply w-3 h-3 bg-gray-300 rounded-full opacity-100 transition-all;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-[#c87e4f] scale-125;
+  }
+}
+
+
