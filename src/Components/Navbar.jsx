@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef();
 
-  // Close dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -19,13 +18,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className=" bg-[#2e1e17]/90 backdrop-blur-sm shadow-md border-gray-200 text-white fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#2e1e17]/90 backdrop-blur-sm shadow-md border-gray-200 text-white fixed top-0 left-0 w-full z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="text-3xl uppercase font-semibold text-white">
           Koppee
         </Link>
 
-        {/* Hamburger Icon */}
         <button
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#3c2d2d] focus:outline-none focus:ring-2 focus:ring-yellow-500"
@@ -38,33 +36,45 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Nav Links */}
-        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
-          <div className="font-medium flex flex-col p-4 mt-4 border border-gray-700 rounded-lg bg-[#2b1e1e] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
-            <Link to="/" className="block py-2 px-3 hover:text-yellow-500 rounded md:p-0">
+        <div
+          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
+        >
+          <div className="font-medium flex flex-col items-start p-4 mt-4 border border-gray-700 rounded-lg bg-[#2b1e1e] md:flex-row md:space-x-8 md:items-center md:mt-0 md:border-0 md:bg-transparent">
+            <Link
+              to="/"
+              className="block w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
+            >
               Home
             </Link>
-            <Link to="/about" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+            <Link
+              to="/about"
+              className="block w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
+            >
               About
             </Link>
-            <Link to="/services" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+            <Link
+              to="/services"
+              className="block w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
+            >
               Services
             </Link>
-            <Link to="/menu" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+            <Link
+              to="/menu"
+              className="block w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
+            >
               Menu
             </Link>
 
-            {/* Pages Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative w-full md:w-auto" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-1 hover:text-yellow-500 mt-2 md:mt-0"
+                className="flex items-center gap-1 w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
               >
                 Pages <span className="text-sm">▼</span>
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute md:left-0 w-40 bg-white shadow-lg rounded mt-1 z-10">
+                <div className="absolute left-0 md:left-auto md:right-0 w-40 bg-white shadow-lg rounded mt-1 z-10">
                   <Link
                     to="/reservation"
                     className="block px-4 py-2 text-[#2e1e17] hover:bg-yellow-500 hover:text-white"
@@ -81,7 +91,10 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link to="/contact" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+            <Link
+              to="/contact"
+              className="block w-full py-2 px-3 hover:text-yellow-500 text-left md:w-auto md:p-0"
+            >
               Contact
             </Link>
           </div>

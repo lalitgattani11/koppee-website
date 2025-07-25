@@ -45,7 +45,6 @@ function Menu() {
 
   return (
     <div id="menu" className="bg-[#FFFBF2] w-full py-16 px-4 sm:px-8 md:px-16">
-      {/* Section Heading */}
       <div className="flex flex-col items-center justify-center">
         <svg
           className="h-24 w-[2px] text-yellow-300"
@@ -68,15 +67,14 @@ function Menu() {
       <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12">
         Competitive Pricing
       </h2>
-
-      {/* Menu Items */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 py-12 px-4 text-center md:text-left items-center">
-        {/* Hot Coffee Section */}
         <div className="flex flex-col items-center md:items-start">
           <h2 className="text-4xl font-bold text-[#2D2D2D] mb-8">Hot Coffee</h2>
           {hotCoffees.map((coffee, index) => (
-            <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start mb-10 text-center sm:text-left">
-              {/* Image with Price */}
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row items-center sm:items-start mb-10 text-center sm:text-left"
+            >
               <div className="relative w-24 h-24 min-w-[6rem] mr-0 sm:mr-6 mb-4 sm:mb-0">
                 <img
                   src={coffee.image}
@@ -87,7 +85,7 @@ function Menu() {
                   {coffee.price}
                 </div>
               </div>
-              {/* Text Info */}
+
               <div>
                 <h3 className="text-xl font-semibold text-[#2D2D2D]">
                   {coffee.name}
@@ -100,12 +98,15 @@ function Menu() {
           ))}
         </div>
 
-        {/* Cold Coffee Section */}
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="text-4xl font-bold text-[#2D2D2D] mb-8">Cold Coffee</h2>
+          <h2 className="text-4xl font-bold text-[#2D2D2D] mb-8">
+            Cold Coffee
+          </h2>
           {coldCoffees.map((coffee, index) => (
-            <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start mb-10 text-center sm:text-left">
-              {/* Image with Price */}
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row items-center sm:items-start mb-10 text-center sm:text-left"
+            >
               <div className="relative w-24 h-24 min-w-[6rem] mr-0 sm:mr-6 mb-4 sm:mb-0">
                 <img
                   src={coffee.image}
@@ -116,7 +117,7 @@ function Menu() {
                   {coffee.price}
                 </div>
               </div>
-              {/* Text Info */}
+
               <div>
                 <h3 className="text-xl font-semibold text-[#2D2D2D]">
                   {coffee.name}

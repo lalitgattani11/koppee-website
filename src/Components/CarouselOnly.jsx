@@ -30,7 +30,8 @@ const CarouselOnly = () => {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div id="home"
+          <div
+            id="home"
             className="w-full h-screen bg-cover bg-center relative"
             style={{ backgroundImage: `url(${slide.img})` }}
           >

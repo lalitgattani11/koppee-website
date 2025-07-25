@@ -12,7 +12,6 @@ function Footer() {
       <div className="absolute inset-0 bg-[#2b1e1e] bg-opacity-80"></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row justify-center items-center gap-20 text-center lg:text-left py-20 px-4">
-        {/* Contact Section */}
         <div className="w-full sm:w-2/3 lg:w-auto">
           <h2 className="text-3xl uppercase font-bold tracking-wide mb-4">
             Get In Touch
@@ -45,8 +44,6 @@ function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Social Media */}
         <div className="w-full sm:w-2/3 lg:w-auto">
           <h2 className="text-3xl uppercase font-bold tracking-wide mb-2">
             Follow Us
@@ -80,7 +77,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Open Hours */}
         <div className="w-full sm:w-2/3 lg:w-auto">
           <h2 className="text-3xl uppercase font-bold tracking-wide mb-4">
             Open Hours
@@ -98,10 +94,10 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Line */}
       <div className="relative z-10 border-t border-yellow-900 mt-5 px-4">
         <p className="mt-5 text-center text-white text-sm sm:text-base pb-5">
-          Copyright © <span className="text-yellow-300">Koppee</span>. All Rights Reserved.
+          Copyright © <span className="text-yellow-300">Koppee</span>. All
+          Rights Reserved.
         </p>
       </div>
     </div>

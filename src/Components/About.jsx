@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -28,7 +29,6 @@ function About() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-12 items-center justify-between">
-        {/* Our Story */}
         <div className="w-full md:w-1/2">
           <h1 className="font-bold text-3xl sm:text-4xl mb-4">Our Story</h1>
           <h2 className="font-semibold text-xl mb-4">
@@ -42,12 +42,11 @@ function About() {
             Today, our coffee is more than just a drink — it's a story in every
             cup.
           </p>
-          <button className="bg-gray-900 hover:bg-black text-white font-semibold px-5 py-2 rounded-md">
+          <Link to="/contact" className="bg-gray-900 hover:bg-black text-white font-semibold px-5 py-2 rounded-md">
             Learn More
-          </button>
+          </Link>
         </div>
 
-        {/* Image */}
         <div className="w-full md:w-1/3">
           <img
             className="w-full h-auto object-cover rounded-xl"
@@ -56,7 +55,6 @@ function About() {
           />
         </div>
 
-        {/* Our Vision */}
         <div className="w-full md:w-1/2">
           <h1 className="font-bold text-3xl sm:text-4xl mb-4">Our Vision</h1>
           <h2 className="font-semibold text-xl mb-4">
@@ -68,9 +66,11 @@ function About() {
             mission is to become a symbol of quality, sustainability, and
             soulful living, inspiring communities through every cup we serve.
           </p>
-          <button className="bg-yellow-300 hover:bg-yellow-500 px-5 py-2 font-semibold rounded-md">
-            Learn More
-          </button>
+          <Link to="/contact">
+            <button className="bg-yellow-300 hover:bg-yellow-500 px-5 py-2 font-semibold rounded-md">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -37,8 +37,10 @@ const testimonials = [
 
 function Testimonial() {
   return (
-    <div id="testimonial" className="bg-[#FFFBF2] px-5 md:px-20 py-16 text-center mb-5">
-      {/* Header */}
+    <div
+      id="testimonial"
+      className="bg-[#FFFBF2] px-5 md:px-20 py-16 text-center mb-5"
+    >
       <div className="flex flex-col items-center justify-center">
         <svg
           className="h-24 w-[2px] text-yellow-300"
@@ -63,7 +65,6 @@ function Testimonial() {
         Our Clients Say
       </h2>
 
-      {/* Swiper Slider */}
       <Swiper
         modules={[Pagination]}
         spaceBetween={25}
@@ -108,7 +109,6 @@ function Testimonial() {
         ))}
       </Swiper>
 
-      {/* Custom Pagination Dots */}
       <div className="custom-pagination flex justify-center mt-6 gap-2" />
     </div>
   );

@@ -12,26 +12,28 @@ const services = [
     image: "service-2.jpg",
     icon: <FaCoffee size={20} className="text-white" />,
     title: "Fresh Coffee Beans",
-    desc: "Enjoy coffee made from handpicked, freshly roasted beans,Every sip delivers rich aroma and unbeatable freshness."
+    desc: "Enjoy coffee made from handpicked, freshly roasted beans,Every sip delivers rich aroma and unbeatable freshness.",
   },
   {
     image: "service-3.jpg",
     icon: <FaMedal size={20} className="text-white" />,
     title: "Best Quality Coffee",
-    desc: "Crafted with premium beans and expert brewing,Taste the difference in every smooth, flavorful cup."
+    desc: "Crafted with premium beans and expert brewing,Taste the difference in every smooth, flavorful cup.",
   },
   {
     image: "service-4.jpg",
     icon: <FaTable size={20} className="text-white" />,
     title: "Online Table Booking",
-    desc: "Reserve your seat instantly from anywhere, anytime, Skip the queue and enjoy a hassle-free coffee experience."
+    desc: "Reserve your seat instantly from anywhere, anytime, Skip the queue and enjoy a hassle-free coffee experience.",
   },
 ];
 
 function Service() {
   return (
-    <div id="service" className="bg-[#FFFBF2] w-full py-16 px-4 sm:px-8 md:px-16">
-      {/* Section Heading */}
+    <div
+      id="service"
+      className="bg-[#FFFBF2] w-full py-16 px-4 sm:px-8 md:px-16"
+    >
       <div className="flex flex-col items-center justify-center mb-10">
         <svg
           className="h-24 w-[2px] text-yellow-300"
@@ -56,7 +58,6 @@ function Service() {
         Fresh & Organic Beans
       </h2>
 
-      {/* Services */}
       <div className="flex flex-col items-center gap-10">
         {services.map((service, index) => (
           <div
