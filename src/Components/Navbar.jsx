@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +19,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#2e1e17]/90 backdrop-blur-sm shadow-md border-gray-200 text-white fixed top-0 left-0 w-full z-50">
+    <nav className=" bg-[#2e1e17]/90 backdrop-blur-sm shadow-md border-gray-200 text-white fixed top-0 left-0 w-full z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="text-3xl uppercase font-semibold text-white">
+        <Link to="/" className="text-3xl uppercase font-semibold text-white">
           Koppee
-        </a>
+        </Link>
 
         {/* Hamburger Icon */}
         <button
@@ -38,85 +39,52 @@ const Navbar = () => {
         </button>
 
         {/* Nav Links */}
-        <div
-          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
-        >
-          <ul className="font-medium flex flex-col p-4 mt-4 border border-gray-700 rounded-lg bg-[#2b1e1e] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
-            <li>
-              <a
-                href="#home"
-                className="block py-2 px-3 hover:text-yellow-500 rounded md:p-0"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#service"
-                className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#menu"
-                className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0"
-              >
-                Menu
-              </a>
-            </li>
+        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
+          <div className="font-medium flex flex-col p-4 mt-4 border border-gray-700 rounded-lg bg-[#2b1e1e] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+            <Link to="/" className="block py-2 px-3 hover:text-yellow-500 rounded md:p-0">
+              Home
+            </Link>
+            <Link to="/about" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+              About
+            </Link>
+            <Link to="/services" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+              Services
+            </Link>
+            <Link to="/menu" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+              Menu
+            </Link>
 
             {/* Pages Dropdown */}
-            <li className="relative" ref={dropdownRef}>
+            <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-1  hover:text-yellow-500 rounded md:mt-0 mt-2"
+                className="flex items-center gap-1 hover:text-yellow-500 mt-2 md:mt-0"
               >
                 Pages <span className="text-sm">▼</span>
               </button>
 
-              <ul
-                className={`absolute md:left-0 w-40 bg-white shadow-lg rounded mt-1 z-10 ${
-                  isDropdownOpen ? "block" : "hidden"
-                }`}
-              >
-                <li>
-                  <a
-                    href="#reservation"
+              {isDropdownOpen && (
+                <div className="absolute md:left-0 w-40 bg-white shadow-lg rounded mt-1 z-10">
+                  <Link
+                    to="/reservation"
                     className="block px-4 py-2 text-[#2e1e17] hover:bg-yellow-500 hover:text-white"
                   >
                     Reservation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#testimonial"
+                  </Link>
+                  <Link
+                    to="/testimonial"
                     className="block px-4 py-2 text-[#2e1e17] hover:bg-yellow-500 hover:text-white"
                   >
                     Testimonial
-                  </a>
-                </li>
-              </ul>
-            </li>
+                  </Link>
+                </div>
+              )}
+            </div>
 
-            <li>
-              <a
-                href="#contact"
-                className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+            <Link to="/contact" className="block py-2 px-3 hover:text-yellow-500 text-white rounded md:p-0">
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

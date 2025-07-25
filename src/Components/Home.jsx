@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import About from './About';
 import CarouselOnly from './CarouselOnly';
 import Service from './Service';
@@ -12,7 +11,7 @@ import Footer from './Footer';
 function Home() {
   return (
     <div>
-        <Navbar/>
+        
         <CarouselOnly/>
         <About/>
         <Service/>

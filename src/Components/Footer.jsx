@@ -8,7 +8,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 function Footer() {
   return (
-    <div id="contact" className="relative bg-[url('/images/bg.jpg')] bg-cover bg-center text-white w-full">
+    <div className="relative bg-[url('/images/bg.jpg')] bg-cover bg-center text-white w-full">
       <div className="absolute inset-0 bg-[#2b1e1e] bg-opacity-80"></div>
 
       <div className="relative z-10 flex flex-col lg:flex-row justify-center items-center gap-20 text-center lg:text-left py-20 px-4">
@@ -37,11 +37,11 @@ function Footer() {
             </a>
 
             <a
-              href="mailto:laitgattani@gmail.com"
+              href="mailto:laitgattani139@gmail.com"
               className="flex items-center justify-center lg:justify-start gap-2 hover:text-yellow-500"
             >
               <CiMail className="text-xl" />
-              laitgattani@gmail.com
+              laitgattani139@gmail.com
             </a>
           </div>
         </div>

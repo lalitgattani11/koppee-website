@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div id="about" className="bg-[#FFFBF2] w-full py-16 px-4 sm:px-8 md:px-16">
+    <div className="bg-[#FFFBF2] w-full py-16 px-4 sm:px-8 md:px-16">
       <div className="flex flex-col items-center justify-center">
         <svg
           className="h-24 w-[2px] text-yellow-300"
